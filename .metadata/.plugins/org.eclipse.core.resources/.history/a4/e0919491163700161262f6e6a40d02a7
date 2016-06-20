@@ -1,0 +1,173 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Properties;
+import org.hibernate.*;
+import org.hibernate.cfg.*;
+import org.hibernate.service.*;
+
+/**
+ * Nicole Dahlquist
+ * PROG3060 - Exercise 2
+ * TeamDemo class that contains the main method
+ */
+
+public class TeamDemo {
+
+	private static Connection conn;
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		if(conn == null){
+			try {
+				getConnection();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		  Session session = null;
+		  SessionFactory sessionFactory = null;
+		  ServiceRegistry serviceRegistry = null;
+
+		    try {
+
+		     /* We create a SessionFactory based on the hibernate.cfg.xml
+		        file; then from a SessionFactory, we can create an individual
+		        Session object. The Configuration object changed significantly with
+		        Hibernate Version 4; examples from older sources will not work with 
+		        Version 4 libraries. */
+
+		    	Configuration configuration = new Configuration()
+		    		// .addClass(Book.class)
+		    		// .addResource("book.hbm.xml")
+		    		.addResource("hibernate.cfg.xml")
+		    		.setProperty("hibernate.dialect", "org.hibernate.dialect.DerbyDialect");
+		    	configuration.configure();
+		    	serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();        
+		    	sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+		    	
+		       session = sessionFactory.openSession();
+		       List teams = session.createQuery("from Team t WHERE "
+				+ "t.teamName = :team AND t.league = 'NHL'")
+				.setString("team", "Montreal Canadiens").list();
+		       if (teams.isEmpty() != true) { 
+		           for(int i=0; i < teams.size(); i++){
+			           Team team = (Team)teams.get(i);
+			           String league = team.getLeague().getLeagueName();
+			           String manager = team.getManager().getLastName() + ", " + team.getManager().getFirstName();
+			           String asstCoach = team.getAsstCoach().getLastName() + ", " + team.getAsstCoach().getFirstName();
+			           String headCoach = team.getHeadCoach().getLastName() + ", " + team.getHeadCoach().getFirstName();
+			           String trainer = team.getTrainer().getLastName() + ", " + team.getTrainer().getFirstName();
+			           System.out.println ("Team ID: " + team.getTeamID());
+			           System.out.println ("Team Name: " + team.getTeamName());
+			           System.out.println ("League: " + league);
+			           System.out.println ("Sponsor: " + team.getSponsor());
+			           System.out.println ("Website: " + team.getWebsite());
+			           System.out.println ("Assistant Coach: " + asstCoach);
+			           System.out.println ("Head Coach: " + headCoach);
+			           System.out.println ("Manager: " + manager);
+			           System.out.println ("Trainer: " + trainer);
+			           
+		           }
+		        } else {
+		           System.out.println ("No teams");
+		        }
+		    }
+		    catch(Exception e){
+		    	e.printStackTrace();
+		    }
+//		    try{
+//
+//		           Staff staff = new Staff();
+//		           Staff staff2 = new Staff();
+//		           Staff staff3 = new Staff();
+//		           Staff staff4 = new Staff();
+//		   		   Transaction tx = session.beginTransaction();
+//		   		   
+//		   		   // staff
+//		   		   staff.setStaffID("123456");
+//		   		   staff.setFirstName("Nicole");
+//		   		   staff.setLastName("Dahlquist");
+//		   		   staff.setCity("Kitchener");
+//		   		   staff.setState_province("ON");
+//		   		   staff.setCountry("Canada");
+//		   		   staff.setPostalCode("N2B 2B2");
+//		   		   staff.setCertification("Y");
+//		   		   staff.setEmail("ndahlquist-cc@conestogac.on.ca");
+//		   		   staff.setPhone("5195551212");
+//		   		   staff.setMobile("2265551212");
+//		   		   session.save(staff);
+//		   		   
+//		   		   // staff 2
+//		   		   staff2.setStaffID("234567");
+//		   		   staff2.setFirstName("Joe");
+//		   		   staff2.setLastName("Blow");
+//		   		   staff2.setCity("Waterloo");
+//		   		   staff2.setState_province("ON");
+//		   		   staff2.setCountry("Canada");
+//		   		   staff2.setPostalCode("N2A 1A1");
+//		   		   staff2.setCertification("Y");
+//		   		   staff2.setEmail("j.blow@live.ca");
+//		   		   staff2.setPhone("5196661212");
+//		   		   staff2.setMobile("2266661212");
+//		   		   session.save(staff2);
+//		   		   
+//		   		   // staff 3
+//		   		   staff3.setStaffID("345678");
+//		   		   staff3.setFirstName("Andrew");
+//		   		   staff3.setLastName("Smith");
+//		   		   staff3.setCity("Kitchener");
+//		   		   staff3.setState_province("ON");
+//		   		   staff3.setCountry("Canada");
+//		   		   staff3.setPostalCode("N2C 3C3");
+//		   		   staff3.setCertification("Y");
+//		   		   staff3.setEmail("a.smith@gmail.com");
+//		   		   staff3.setPhone("5197771212");
+//		   		   staff3.setMobile("2267771212");
+//		   		   session.save(staff3);
+//		   		   
+//		   		   // staff 4
+//		   		   staff4.setStaffID("456789");
+//		   		   staff4.setFirstName("Marc");
+//		   		   staff4.setLastName("Shark");
+//		   		   staff4.setCity("Waterloo");
+//		   		   staff4.setState_province("ON");
+//		   		   staff4.setCountry("Canada");
+//		   		   staff4.setPostalCode("N2D 4D4");
+//		   		   staff4.setCertification("Y");
+//		   		   staff4.setEmail("marc_s@yahoo.ca");
+//		   		   staff4.setPhone("5198881212");
+//		   		   staff4.setMobile("2268881212");
+//		   		   session.save(staff4);
+//		   		   tx.commit();
+//		    }
+//		    catch(Exception e){
+//		    	e.printStackTrace();
+//		    }
+	}
+	
+	/**
+	 * Tries to get a connection
+	 * @throws SQLException
+	 */
+	public static void getConnection() throws SQLException {
+		String userName = "ndahlquist";
+		String password = "password";
+		
+		Properties connectionProps = new Properties();
+		try {
+			connectionProps.put("user", userName);
+			connectionProps.put("password", password);
+			if(conn == null) {
+				conn = DriverManager.getConnection("jdbc:derby://localhost:1527/c:/Users/Nicole/DerbyLeagueDB/LeagueDB", connectionProps);
+				//conn = DriverManager.getConnection("jdbc:derby://localhost:1527/G:/LeagueDB/leagueDB;", connectionProps);	
+			}			
+		}
+		catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}

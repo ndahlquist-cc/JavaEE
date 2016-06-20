@@ -1,0 +1,18 @@
+/**
+ * Nicole Dahlquist
+ * PROG3060 - Exercise 2
+ * Class definition for the League object in LeagueDB 
+ */
+
+public class League {
+
+	private String leagueID;
+	private String leagueName;
+	private String leagueSponsor;
+	public String getLeagueID() {
+		return leagueID;
+	}
+	public void setLeagueID(String leagueID) {
+		this.leagueID = leagueID;
+	}
+}

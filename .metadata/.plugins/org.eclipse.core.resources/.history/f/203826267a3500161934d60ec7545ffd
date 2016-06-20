@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <class name="Team" table="TEAM">
+
+      <id name="teamID" column="teamID" >
+	   <generator class="assigned"/>
+	  </id>
+
+	  <property name="league">
+		 <column name="LEAGUE" />
+	  </property>
+
+	  <property name="sponsor">
+		<column name="SPONSOR"/>
+	  </property>
+	  
+	  <property name="teamName">
+		<column name="TEAMNAME"/>
+	  </property>
+	  
+	  <property name="website">
+		<column name="WEBSITE"/>
+	  </property>
+	  
+	  <set name="roster" inverse="true">
+	     <key column="team"/>
+	     <one-to-many class="Roster"/>
+	  </set>
+   </class>
+
+</hibernate-mapping>

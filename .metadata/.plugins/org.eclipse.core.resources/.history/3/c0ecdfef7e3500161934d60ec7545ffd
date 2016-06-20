@@ -1,0 +1,92 @@
+import java.util.*;
+import java.util.List.*;
+
+/* Class definition for the Team object in LeagueDB */
+
+public class Team {
+	
+    private String teamID;
+    private String league;
+    private String sponsor;
+    private String teamName;
+    private String website;
+    
+    private Set<Roster> roster = new HashSet<Roster>();
+    
+    public Team() 
+	{
+	}
+    
+    public String getTeamID() 
+	{
+	    return teamID;
+	}
+    
+    public void setTeamID( String teamID )
+	{
+	    this.teamID = teamID;
+	}
+    
+    public String getLeague()
+	{
+	    return league;
+	}
+    
+    public void setLeague( String name )
+	{
+	    this.league = name;
+	}
+    
+    public String getSponsor()
+	{
+	    return sponsor;
+	}
+    
+    public void setSponsor( String name )
+	{
+	    this.sponsor = name;
+	}
+    
+    public String getTeamName()
+	{
+	    return teamName;
+	}
+    
+    public void setTeamName( String name )
+	{
+	    this.teamName = name;
+	}
+    
+    public String getWebsite()
+	{
+	    return website;
+	}
+    
+    public void setWebsite( String url )
+	{
+	    this.website = url;
+	}
+    
+    public Set<Roster> getRoster()
+    {
+    	return roster;
+    }
+    
+    public void setRoster( Set<Roster> roster )
+    {
+    	this.roster = roster;
+    }
+    
+    public void addPlayer( Roster teammate )
+	{
+		((Roster) roster).setTeam( this ); // With inverse=true, the setTeam method causes the UPDATE to be issued
+		roster.add(teammate);
+	}
+    
+    public void deletePlayer( Roster teammate )
+	{
+		((Roster) roster).setTeam( new Team() ); // With inverse=true, the setTeam method causes the UPDATE to be issued
+		roster.remove(teammate);
+	}
+
+}

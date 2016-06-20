@@ -1,0 +1,44 @@
+import java.util.List;
+
+/**
+ * Nicole Dahlquist
+ * PROG3060 - Exercise 2
+ * TeamDemo class that contains the main method
+ */
+
+public class TeamDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		List teams = session.createQuery("from Team t WHERE"
+				+ "t.teamName = ? AND t.league = 'NHL'")
+				.setString(0, "Chicago Blackhawks").list();
+
+	}
+	
+	/**
+	 * Attempts to retrieve derby connection from the session
+	 * @param request Request object
+	 * @param response Response object
+	 * @throws ServletException
+	 * @throws IOException
+	 */
+	protected void getConnection(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		//Initialize local variables
+		Connection conn = null;
+		HttpSession session = request.getSession();
+		
+		// attempt to get connection from session		
+		conn = (Connection)session.getAttribute("conn");
+		
+		//Redirect to database log in page if no connection found
+		if(conn == null){
+			String url = "/Login.jsp";
+			ServletContext ctx = getServletContext();	
+			ctx.getRequestDispatcher(url).forward(request, response);
+		}
+	}
+
+}

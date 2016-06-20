@@ -1,0 +1,25 @@
+/**
+ * Nicole Dahlquist
+ * PROG3060 - Exercise 2
+ * Class definition for the Staff object in LeagueDB 
+ */
+
+public class Staff {
+	
+	public Staff() 
+	{
+	}
+	
+	private String staffID;
+	private String lastName;
+	private String firstName;
+	private String streetAddress;
+	private String city;
+	private String state_province;
+	private String postalCode;
+	private String country;
+	private String phone;
+	private String mobile;
+	private String email;
+	private String cerification;
+}

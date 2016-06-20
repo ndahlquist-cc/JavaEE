@@ -1,0 +1,17 @@
+/**
+ * Nicole Dahlquist
+ * PROG3060 - Exercise 2
+ * TeamDemo class that contains main method
+ */
+
+public class TeamDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

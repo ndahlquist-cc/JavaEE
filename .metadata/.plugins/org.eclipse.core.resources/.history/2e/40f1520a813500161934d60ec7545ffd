@@ -1,0 +1,82 @@
+/**
+ * Nicole Dahlquist
+ * PROG3060 - Exercise 2
+ * Class definition for the Team object in LeagueDB 
+ */
+
+public class Team {
+	
+    private String teamID;
+    private String league;
+    private String sponsor;
+    private String teamName;
+    private Staff headCoach;
+    private Staff asstCoach;
+    private Staff trainer;
+    private Staff manager;
+    private String website;
+    
+    
+    public Team() 
+	{
+	}
+    
+    public String getTeamID() 
+	{
+	    return teamID;
+	}
+    
+    public void setTeamID( String teamID )
+	{
+	    this.teamID = teamID;
+	}
+    
+    public String getLeague()
+	{
+	    return league;
+	}
+    
+    public void setLeague( String name )
+	{
+	    this.league = name;
+	}
+    
+    public String getSponsor()
+	{
+	    return sponsor;
+	}
+    
+    public void setSponsor( String name )
+	{
+	    this.sponsor = name;
+	}
+    
+    public String getTeamName()
+	{
+	    return teamName;
+	}
+    
+    public void setTeamName( String name )
+	{
+	    this.teamName = name;
+	}
+    
+    public String getWebsite()
+	{
+	    return website;
+	}
+    
+    public void setWebsite( String url )
+	{
+	    this.website = url;
+	}
+
+	public Staff getHeadCoach() {
+		return headCoach;
+	}
+
+	public void setHeadCoach(Staff headCoach) {
+		this.headCoach = headCoach;
+	}
+
+}

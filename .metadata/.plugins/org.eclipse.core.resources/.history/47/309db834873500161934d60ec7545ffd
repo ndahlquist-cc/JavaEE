@@ -1,0 +1,60 @@
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Properties;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Nicole Dahlquist
+ * PROG3060 - Exercise 2
+ * TeamDemo class that contains the main method
+ */
+
+public class TeamDemo {
+
+	private static Connection conn;
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		if(conn == null){
+			getConnection();
+		}
+		Session session = factory.openSession();
+		List teams = conn.createQuery("from Team t WHERE"
+				+ "t.teamName = ? AND t.league = 'NHL'")
+				.setString(0, "Chicago Blackhawks").list(8);
+
+	}
+	
+	/**
+	 * Tries to get a connection
+	 * @throws SQLException
+	 */
+	public static void getConnection() throws SQLException {
+		String userName = "ndahlquist";
+		String password = "password";
+		
+		Properties connectionProps = new Properties();
+		try {
+			connectionProps.put("user", userName);
+			connectionProps.put("password", password);
+			if(conn == null) {
+				conn = DriverManager.getConnection("jdbc:derby://localhost:1527/c:/Users/Nicole/DerbyLeagueDB/LeagueDB", connectionProps);
+				//conn = DriverManager.getConnection("jdbc:derby://localhost:1527/G:/LeagueDB/leagueDB;", connectionProps);	
+			}			
+		}
+		catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}
