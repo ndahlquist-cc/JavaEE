@@ -46,7 +46,7 @@ public class TeamDemo {
 				.applySettings(configuration.getProperties());
 			serviceRegistry = serviceRegistryBuilder.build();
 			sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-			session = sessionFactory.openSession();
+			session = sessionFactory.openSession();args
 			List teams = session
 					.createQuery(
 							"from Team t WHERE "
@@ -64,7 +64,7 @@ public class TeamDemo {
 							+ team.getHeadCoach().getFirstName();
 					String trainer = team.getTrainer().getLastName() + ", "
 							+ team.getTrainer().getFirstName();
-					System.out.println("\nTeam ID: " + team.getTeamID());
+					System.out.println("Team ID: " + team.getTeamID());
 					System.out.println("Team Name: " + team.getTeamName());
 					System.out.println("League: " + league);
 					System.out.println("Sponsor: " + team.getSponsor());
@@ -72,14 +72,16 @@ public class TeamDemo {
 					System.out.println("Assistant Coach: " + asstCoach);
 					System.out.println("Head Coach: " + headCoach);
 					System.out.println("Manager: " + manager);
-					System.out.println("Trainer: " + trainer + "\n");
+					System.out.println("Trainer: " + trainer);
 				}
 			} else {
-				System.out.println("\nNo teams\n");
+				System.out.println("No teams");
 			}
-		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		// create staff and new team
-		
+		try {
 			Staff staff = new Staff();
 			Staff staff2 = new Staff();
 			Staff staff3 = new Staff();
@@ -152,39 +154,6 @@ public class TeamDemo {
 			team.setWebsite("www.conestogac.on.ca");
 			session.save(team);
 			tx.commit();
-			
-			// Print new team
-			List newTeams = session
-					.createQuery(
-							"from Team t WHERE "
-									+ "t.teamName = :team AND t.league = 'NHL'")
-					.setString("team", "Montreal Canadiens").list();
-			if (newTeams.isEmpty() != true) {
-				for (int i = 0; i < newTeams.size(); i++) {
-					Team newTeam = (Team) newTeams.get(i);
-					String league1 = newTeam.getLeague().getLeagueName();
-					String manager1 = newTeam.getManager().getLastName() + ", "
-							+ newTeam.getManager().getFirstName();
-					String asstCoach1 = newTeam.getAsstCoach().getLastName() + ", "
-							+ newTeam.getAsstCoach().getFirstName();
-					String headCoach1 = newTeam.getHeadCoach().getLastName() + ", "
-							+ newTeam.getHeadCoach().getFirstName();
-					String trainer1 = newTeam.getTrainer().getLastName() + ", "
-							+ newTeam.getTrainer().getFirstName();
-					System.out.println("\nNewly added team:");
-					System.out.println("Team ID: " + newTeam.getTeamID());
-					System.out.println("Team Name: " + newTeam.getTeamName());
-					System.out.println("League: " + league1);
-					System.out.println("Sponsor: " + newTeam.getSponsor());
-					System.out.println("Website: " + newTeam.getWebsite());
-					System.out.println("Assistant Coach: " + asstCoach1);
-					System.out.println("Head Coach: " + headCoach1);
-					System.out.println("Manager: " + manager1);
-					System.out.println("Trainer: " + trainer1);
-				}
-			} else {
-				System.out.println("No teams");
-			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

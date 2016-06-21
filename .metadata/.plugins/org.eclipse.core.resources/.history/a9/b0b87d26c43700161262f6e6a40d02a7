@@ -64,7 +64,7 @@ public class TeamDemo {
 							+ team.getHeadCoach().getFirstName();
 					String trainer = team.getTrainer().getLastName() + ", "
 							+ team.getTrainer().getFirstName();
-					System.out.println("\nTeam ID: " + team.getTeamID());
+					System.out.println("Team ID: " + team.getTeamID());
 					System.out.println("Team Name: " + team.getTeamName());
 					System.out.println("League: " + league);
 					System.out.println("Sponsor: " + team.getSponsor());
@@ -72,10 +72,10 @@ public class TeamDemo {
 					System.out.println("Assistant Coach: " + asstCoach);
 					System.out.println("Head Coach: " + headCoach);
 					System.out.println("Manager: " + manager);
-					System.out.println("Trainer: " + trainer + "\n");
+					System.out.println("Trainer: " + trainer);
 				}
 			} else {
-				System.out.println("\nNo teams\n");
+				System.out.println("No teams");
 			}
 		
 		// create staff and new team
@@ -171,7 +171,6 @@ public class TeamDemo {
 							+ newTeam.getHeadCoach().getFirstName();
 					String trainer1 = newTeam.getTrainer().getLastName() + ", "
 							+ newTeam.getTrainer().getFirstName();
-					System.out.println("\nNewly added team:");
 					System.out.println("Team ID: " + newTeam.getTeamID());
 					System.out.println("Team Name: " + newTeam.getTeamName());
 					System.out.println("League: " + league1);
