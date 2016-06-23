@@ -23,13 +23,6 @@ public class TeamDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		if (conn == null) {
-			try {
-				getConnection();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
 		Session session = null;
 		SessionFactory sessionFactory = null;
 		StandardServiceRegistryBuilder serviceRegistryBuilder = null;
@@ -158,7 +151,7 @@ public class TeamDemo {
 					.createQuery(
 							"from Team t WHERE "
 									+ "t.teamName = :team AND t.league = 'NHL'")
-					.setString("team", "Montreal Canadiens").list();
+					.setString("team", "Nicole is Awesome").list();
 			if (newTeams.isEmpty() != true) {
 				for (int i = 0; i < newTeams.size(); i++) {
 					Team newTeam = (Team) newTeams.get(i);
@@ -185,37 +178,10 @@ public class TeamDemo {
 			} else {
 				System.out.println("No teams");
 			}
+			session.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	/**
-	 * Tries to get a connection
-	 * 
-	 * @throws SQLException
-	 */
-	public static void getConnection() throws SQLException {
-		String userName = "ndahlquist";
-		String password = "password";
-
-		Properties connectionProps = new Properties();
-		try {
-			connectionProps.put("user", userName);
-			connectionProps.put("password", password);
-			if (conn == null) {
-				conn = DriverManager
-					.getConnection(
-						"jdbc:derby://localhost:1527/c:/Users/Nicole/DerbyLeagueDB/LeagueDB",
-						connectionProps);
-				// conn =
-				// DriverManager
-				//.getConnection(
-				//"jdbc:derby://localhost:1527/G:/LeagueDB/leagueDB;",
-				// connectionProps);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 }
