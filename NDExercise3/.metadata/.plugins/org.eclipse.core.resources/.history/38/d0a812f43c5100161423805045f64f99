@@ -1,0 +1,69 @@
+/**
+ * PROG3060 - Exercise 3
+ * Nicole Dahlquist
+ * Created: July 23, 2016
+ * Roster.java
+ * Roster Class - Represents a roster from the LeagueDB
+ */
+
+
+import javax.persistence.*;
+
+import java.util.Set;
+
+@Entity
+/**
+ * Entity class for the Roster table in the league database
+ * @author Nicole Dahlquist
+ */
+public class Roster {
+	
+	//Class scope variables and constants
+	private int rosterId;
+	private Player player;
+	private Team team;
+	private int jersey;
+	private String position;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	public int getRosterId() {
+		return rosterId;
+	}
+	
+	public void setRosterId(int rosterId) {
+		this.rosterId = rosterId;
+	}
+	
+	@ManyToOne
+	@JoinColumn(name="player", nullable=false)
+	public Player getPlayer() {
+		return player;
+	}
+	
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+	
+	@ManyToOne
+	@JoinColumn(name="team", nullable=false)
+	public Team getTeam() {
+		return team;
+	}
+	
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+	
+	public int getJersey() {
+		return jersey;
+	}
+	
+	public void setJersey(int jersey) {
+		this.jersey = jersey;
+	}
+	
+	public String getPosition() {
+		return position;
+	}
+}

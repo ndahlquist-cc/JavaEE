@@ -1,20 +1,26 @@
 /**
- * PROG3060 - James Wong
+ * PROG3060 - Exercise 3
  * Nicole Dahlquist
- * Created: July 16, 2016
+ * Created: July 23, 2016
+ * Player.java
  * Player Class - Represents a player object from the LeagueDB
  */
 
+
 import java.sql.Date;
-import java.util.ArrayList;
 
 import javax.persistence.*;
 
-import org.hibernate.mapping.Set;
+import java.util.Set;
 
 @Entity
+/**
+ * Entity class for the Player table in the league database
+ * @author Nicole Dahlquist
+ */
 public class Player {
 
+	//Class scope variables and constants
 	private int playerId;
 	private String lastName;
 	private String firstName;
@@ -31,7 +37,6 @@ public class Player {
 	private String mobile;
 	private String email;
 	private Set rosters;
-	private Set playerStats;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -163,4 +168,8 @@ public class Player {
 		return rosters;
 	}
 	
+	public void setRosters(Set rosters){
+		this.rosters = rosters;
+	}
+
 }

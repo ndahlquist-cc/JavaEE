@@ -1,25 +1,29 @@
 /**
- * PROG3060 - James Wong
+ * PROG3060 - Exercise 3
  * Nicole Dahlquist
- * Created: July 16, 2016
+ * Created: July 23, 2016
+ * Roster.java
  * Roster Class - Represents a roster from the LeagueDB
  */
 
 
-import java.util.ArrayList;
-
 import javax.persistence.*;
 
-import org.hibernate.mapping.Set;
+import java.util.Set;
 
 @Entity
+/**
+ * Entity class for the Roster table in the league database
+ * @author Nicole Dahlquist
+ */
 public class Roster {
+	
+	//Class scope variables and constants
 	private int rosterId;
 	private Player player;
 	private Team team;
 	private int jersey;
-	private String positon;
-	private Set playerStats;
+	private String position;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -32,7 +36,7 @@ public class Roster {
 	}
 	
 	@ManyToOne
-	@JoinColumn(nullable=false)
+	@JoinColumn(name="player", nullable=false)
 	public Player getPlayer() {
 		return player;
 	}
@@ -42,7 +46,7 @@ public class Roster {
 	}
 	
 	@ManyToOne
-	@JoinColumn(nullable=false)
+	@JoinColumn(name="team", nullable=false)
 	public Team getTeam() {
 		return team;
 	}
@@ -59,12 +63,11 @@ public class Roster {
 		this.jersey = jersey;
 	}
 	
-	public String getPositon() {
-		return positon;
+	public String getPosition() {
+		return position;
 	}
 	
-	public void setPositon(String positon) {
-		this.positon = positon;
+	public void setPosition(String position) {
+		this.position = position;
 	}
-	
 }

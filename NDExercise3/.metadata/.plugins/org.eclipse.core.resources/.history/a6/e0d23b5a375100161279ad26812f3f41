@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.servlet.ServletContext;
+import javax.servlet.http.*;
+/**
+ * PROG3060 - Exercise 3
+ * Nicole Dahlquist
+ * Created: July 23, 2016
+ * mainline.java
+ * mainline class - contains the transaction
+ */
+public class mainline {
+
+	private static EntityManagerFactory emf;
+	private static EntityManager em;
+	
+	public static void main(String[] args) {
+		// initialize class objects
+		Player player = new Player();
+		Roster roster = new Roster();
+		Team team = new Team();
+		
+		// start JPA transaction
+		getEntityManagerFactory();
+		em= emf.createEntityManager();		
+		em.getTransaction().begin();
+		
+		// get team
+		team = em.find(Team.class, "LFS001");
+		
+		// set player 
+		player.setFirstName("Nicole");
+		player.setLastName("Dahlquist");
+		
+		// set roster
+		roster.setPlayer(player);
+		roster.setJersey(333);
+		roster.setPosition("Goalie");
+		roster.setTeam(team);
+
+		// commit and close transaction
+		em.getTransaction().commit();
+		em.close();
+		roster = getRosters("Toronto Maple Leafs");
+		
+	}
+	
+	/**
+	 * attempts to get an entity manager factory from Persistence class
+	 */
+	private static void getEntityManagerFactory(){
+		emf = null;
+		emf = Persistence.createEntityManagerFactory("leagueDB");
+	}
+
+	// Team queries
+		/**
+		 * Gets a specific team
+		 * @param teamId id of team to retrieve
+		 * @return Team
+		 */
+		private static ArrayList<Roster> getRosters(String teamName)
+		{
+			ArrayList<Roster> rosters = new ArrayList<Roster>();
+			em = emf.createEntityManager();
+			em.getTransaction().begin();
+			rosters = (ArrayList<Roster>)em.createQuery("SELECT r FROM Roster r "
+					+ "WHERE r.team.teamName = :teamName "
+					+ "AND r.team.league = 'NHL' "
+					+ "ORDER BY r.jersey")
+				.setParameter("teamName", teamName).getSingleResult();	
+			em.close();
+			return rosters;
+		}
+}
