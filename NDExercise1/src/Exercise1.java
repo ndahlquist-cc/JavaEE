@@ -1,5 +1,14 @@
+/* Nicole Dahlquist
+ * Exercise 1
+ * PROG3060 - James Wong
+ * Due Date: June 2, 2016
+ */
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.util.*;
+
+import org.apache.derby.jdbc.ClientDataSource;
 
 public class Exercise1 {
 	// class-level variables
@@ -15,7 +24,6 @@ public class Exercise1 {
 			getConnection();
 		}
 		conn.setAutoCommit(false);
-		String dropTable = "DROP TABLE NDAHLQUIST.ARENA";
 		String query = "CREATE TABLE NDAHLQUIST.ARENA ( " +
 				"arenaID INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY, " +
 				"arenaName VARCHAR(40) NOT NULL, " +
@@ -26,26 +34,26 @@ public class Exercise1 {
 				"country VARCHAR(30), " +
 				"phone CHAR(10), " +
 				"capacity INT )";
-		Statement stmt = null;		
+		Statement stmt = null;	
+		
 		try {
 			if(conn != null)
 			{
 				stmt = conn.createStatement();
-				stmt.execute(dropTable);
 				stmt.execute(query);									
 			}
 		}
 		catch(SQLException e){
 			e.printStackTrace();
 		}
-		insertTeam("Montreal arena", "123 Rue Taquine", "Montreal", "QC", "Q1Q1Q1", "Canada", "7775551212", 100000);		
-		insertTeam("Boston arena", "123 Boston St.", "Boston", "MA", "12345", "USA", "8885551212", 500000);
-		insertTeam("Pitts arena", "123 Pitty Ave.", "Pittsburgh", "PA", "23456", "USA", "9995551212", 400000);
-		insertTeam("Vancouver arena", "123 Canuck Cres", "Vancouver", "BC", "V1V1V1", "Canada", "1115551212", 700000);
-		insertTeam("Toronto arena", "123 Kenogami", "Toronto", "ON", "T1T1T1", "Canada", "2225551212", 900000);
-		insertTeam("Detroit arena", "123 Tiger Blvd.", "Detroit", "MI", "34567", "USA", "3335551212", 600000);
-		insertTeam("Chicago arena", "123 Sock St.", "Chicago", "IL", "45678", "USA", "4445551212", 300000);
-		insertTeam("Newark arena", "123 Newark Rd.", "Newark", "NJ", "56789", "USA", "5555551212", 200000);
+		insertArena("Montreal arena", "123 Rue Taquine", "Montreal", "QC", "Q1Q1Q1", "Canada", "7775551212", 100000);		
+		insertArena("Boston arena", "123 Boston St.", "Boston", "MA", "12345", "USA", "8885551212", 500000);
+		insertArena("Pitts arena", "123 Pitty Ave.", "Pittsburgh", "PA", "23456", "USA", "9995551212", 400000);
+		insertArena("Vancouver arena", "123 Canuck Cres", "Vancouver", "BC", "V1V1V1", "Canada", "1115551212", 700000);
+		insertArena("Toronto arena", "123 Kenogami", "Toronto", "ON", "T1T1T1", "Canada", "2225551212", 900000);
+		insertArena("Detroit arena", "123 Tiger Blvd.", "Detroit", "MI", "34567", "USA", "3335551212", 600000);
+		insertArena("Chicago arena", "123 Sock St.", "Chicago", "IL", "45678", "USA", "4445551212", 300000);
+		insertArena("Newark arena", "123 Newark Rd.", "Newark", "NJ", "56789", "USA", "5555551212", 200000);
 		String selectQuery = "SELECT * FROM NDAHLQUIST.ARENA";
 		ResultSet rs = stmt.executeQuery(selectQuery);
 		try {			
@@ -88,7 +96,9 @@ public class Exercise1 {
 	 * @param capacity - the number of people the arena can hold
 	 * @throws SQLException
 	 */
-	public static void insertTeam(String name, String address, String city, String state_prov, String zip_postal, String country, String phone, int capacity) throws SQLException{
+	public static void insertArena
+	(String name, String address, String city, String state_prov, String zip_postal, 
+	String country, String phone, int capacity) throws SQLException{
 		PreparedStatement ps = null;
 		String query = "INSERT INTO NDAHLQUIST.ARENA " +
 				"(arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) " +
@@ -121,16 +131,24 @@ public class Exercise1 {
 	 * @throws SQLException 
 	 */	
 	public static void getConnection() throws SQLException {
-		String userName = "ndahlquist";
-		String password = "password";
-		
-		Properties connectionProps = new Properties();
-		try {
-			connectionProps.put("user", userName);
-			connectionProps.put("password", password);
+		ClientDataSource cds = new ClientDataSource();
+		try
+		{
+			cds.setServerName("localhost");
+			cds.setPortNumber(1527);
+			cds.setDatabaseName("G:\\LeagueDB\\leagueDB;");
+			//cds.setDatabaseName("c:\\Users\\Nicole\\DerbyLeagueDB\\LeagueDB");
+			
+			cds.setUser("ndahlquist");
+			cds.setPassword("password");
+			
+			PrintWriter pw = new PrintWriter(new FileOutputStream("trace.log"));
+			cds.setLogWriter(pw);
+			
+			cds.setTraceLevel(ClientDataSource.TRACE_RESULT_SET_CALLS);
+					
 			if(conn == null) {
-				conn = DriverManager.getConnection("jdbc:derby://localhost:1527/c:/Users/Nicole/DerbyLeagueDB/LeagueDB", connectionProps);
-				//conn = DriverManager.getConnection("jdbc:derby://localhost:1527/G:/LeagueDB/leagueDB;", connectionProps);	
+				conn = cds.getConnection();
 			}			
 		}
 		catch (Exception e){

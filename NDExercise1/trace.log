@@ -1,0 +1,426 @@
+[derby][Time:1464280457805][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] setAutoCommit (false) called
+[derby][Time:1464280457806][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] createStatement () called
+[derby][Time:1464280457810][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] createStatement () returned Statement@cac736f
+[derby][Time:1464280457814][Thread:main][org.apache.derby.client.am.Statement@cac736f] execute (CREATE TABLE NDAHLQUIST.ARENA ( arenaID INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY, arenaName VARCHAR(40) NOT NULL, streetAddress VARCHAR(50), city VARCHAR(30), state_province VARCHAR(20), postalCode CHAR(7), country VARCHAR(30), phone CHAR(10), capacity INT )) called
+[derby][Time:1464280457815][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280457975][Thread:main][org.apache.derby.client.am.Statement@cac736f] execute () returned false
+[derby][Time:1464280457976][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280457995][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@1175e2db
+[derby][Time:1464280457996][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setString (1, Montreal arena) called
+[derby][Time:1464280457998][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458001][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setString (2, 123 Rue Taquine) called
+[derby][Time:1464280458002][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458002][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setString (3, Montreal) called
+[derby][Time:1464280458003][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458005][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setString (4, QC) called
+[derby][Time:1464280458006][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458007][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setString (5, Q1Q1Q1) called
+[derby][Time:1464280458008][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458009][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setString (6, Canada) called
+[derby][Time:1464280458009][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458010][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setString (7, 7775551212) called
+[derby][Time:1464280458011][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458012][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] setInt (8, 100000) called
+[derby][Time:1464280458012][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458013][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] execute () called
+[derby][Time:1464280458014][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458019][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] execute () returned false
+[derby][Time:1464280458020][Thread:main][org.apache.derby.client.am.PreparedStatement42@1175e2db] close () called
+[derby][Time:1464280458021][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280458028][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@4926097b
+[derby][Time:1464280458029][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setString (1, Boston arena) called
+[derby][Time:1464280458030][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458030][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setString (2, 123 Boston St.) called
+[derby][Time:1464280458031][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458032][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setString (3, Boston) called
+[derby][Time:1464280458033][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458034][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setString (4, MA) called
+[derby][Time:1464280458034][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458035][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setString (5, 12345) called
+[derby][Time:1464280458036][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458037][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setString (6, USA) called
+[derby][Time:1464280458038][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458039][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setString (7, 8885551212) called
+[derby][Time:1464280458039][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458040][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] setInt (8, 500000) called
+[derby][Time:1464280458041][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458041][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] execute () called
+[derby][Time:1464280458042][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458044][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] execute () returned false
+[derby][Time:1464280458045][Thread:main][org.apache.derby.client.am.PreparedStatement42@4926097b] close () called
+[derby][Time:1464280458046][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280458050][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@762efe5d
+[derby][Time:1464280458051][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setString (1, Pitts arena) called
+[derby][Time:1464280458052][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458053][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setString (2, 123 Pitty Ave.) called
+[derby][Time:1464280458053][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458054][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setString (3, Pittsburgh) called
+[derby][Time:1464280458055][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458056][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setString (4, PA) called
+[derby][Time:1464280458056][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458057][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setString (5, 23456) called
+[derby][Time:1464280458058][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458059][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setString (6, USA) called
+[derby][Time:1464280458059][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458060][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setString (7, 9995551212) called
+[derby][Time:1464280458061][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458061][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] setInt (8, 400000) called
+[derby][Time:1464280458062][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458062][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] execute () called
+[derby][Time:1464280458063][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458065][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] execute () returned false
+[derby][Time:1464280458066][Thread:main][org.apache.derby.client.am.PreparedStatement42@762efe5d] close () called
+[derby][Time:1464280458066][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280458071][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@5d22bbb7
+[derby][Time:1464280458073][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setString (1, Vancouver arena) called
+[derby][Time:1464280458074][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458075][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setString (2, 123 Canuck Cres) called
+[derby][Time:1464280458075][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458076][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setString (3, Vancouver) called
+[derby][Time:1464280458076][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458078][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setString (4, BC) called
+[derby][Time:1464280458079][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458079][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setString (5, V1V1V1) called
+[derby][Time:1464280458080][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458080][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setString (6, Canada) called
+[derby][Time:1464280458081][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458082][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setString (7, 1115551212) called
+[derby][Time:1464280458082][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458083][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] setInt (8, 700000) called
+[derby][Time:1464280458084][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458084][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] execute () called
+[derby][Time:1464280458085][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458087][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] execute () returned false
+[derby][Time:1464280458088][Thread:main][org.apache.derby.client.am.PreparedStatement42@5d22bbb7] close () called
+[derby][Time:1464280458089][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280458093][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@41a4555e
+[derby][Time:1464280458093][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setString (1, Toronto arena) called
+[derby][Time:1464280458094][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458095][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setString (2, 123 Kenogami) called
+[derby][Time:1464280458095][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458096][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setString (3, Toronto) called
+[derby][Time:1464280458097][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458097][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setString (4, ON) called
+[derby][Time:1464280458098][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458099][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setString (5, T1T1T1) called
+[derby][Time:1464280458100][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458100][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setString (6, Canada) called
+[derby][Time:1464280458101][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458102][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setString (7, 2225551212) called
+[derby][Time:1464280458103][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458103][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] setInt (8, 900000) called
+[derby][Time:1464280458104][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458105][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] execute () called
+[derby][Time:1464280458105][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458107][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] execute () returned false
+[derby][Time:1464280458108][Thread:main][org.apache.derby.client.am.PreparedStatement42@41a4555e] close () called
+[derby][Time:1464280458109][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280458113][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@3830f1c0
+[derby][Time:1464280458114][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setString (1, Detroit arena) called
+[derby][Time:1464280458114][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458115][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setString (2, 123 Tiger Blvd.) called
+[derby][Time:1464280458116][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458117][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setString (3, Detroit) called
+[derby][Time:1464280458119][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458120][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setString (4, MI) called
+[derby][Time:1464280458121][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458122][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setString (5, 34567) called
+[derby][Time:1464280458122][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458123][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setString (6, USA) called
+[derby][Time:1464280458124][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458124][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setString (7, 3335551212) called
+[derby][Time:1464280458125][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458126][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] setInt (8, 600000) called
+[derby][Time:1464280458127][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458129][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] execute () called
+[derby][Time:1464280458129][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458131][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] execute () returned false
+[derby][Time:1464280458132][Thread:main][org.apache.derby.client.am.PreparedStatement42@3830f1c0] close () called
+[derby][Time:1464280458132][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280458137][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@39ed3c8d
+[derby][Time:1464280458137][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setString (1, Chicago arena) called
+[derby][Time:1464280458138][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458139][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setString (2, 123 Sock St.) called
+[derby][Time:1464280458140][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458140][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setString (3, Chicago) called
+[derby][Time:1464280458141][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458142][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setString (4, IL) called
+[derby][Time:1464280458142][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458143][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setString (5, 45678) called
+[derby][Time:1464280458144][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458144][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setString (6, USA) called
+[derby][Time:1464280458144][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458145][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setString (7, 4445551212) called
+[derby][Time:1464280458146][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458147][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] setInt (8, 300000) called
+[derby][Time:1464280458148][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458148][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] execute () called
+[derby][Time:1464280458149][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458151][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] execute () returned false
+[derby][Time:1464280458152][Thread:main][org.apache.derby.client.am.PreparedStatement42@39ed3c8d] close () called
+[derby][Time:1464280458153][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement (INSERT INTO NDAHLQUIST.ARENA (arenaName, streetAddress, city, state_province, postalCode, country, phone, capacity) VALUES (?, ?, ?, ?, ?, ?, ?, ?)) called
+[derby][Time:1464280458156][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] prepareStatement () returned PreparedStatement@71dac704
+[derby][Time:1464280458157][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setString (1, Newark arena) called
+[derby][Time:1464280458158][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458159][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setString (2, 123 Newark Rd.) called
+[derby][Time:1464280458159][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458160][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setString (3, Newark) called
+[derby][Time:1464280458161][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458162][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setString (4, NJ) called
+[derby][Time:1464280458162][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458163][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setString (5, 56789) called
+[derby][Time:1464280458164][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458164][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setString (6, USA) called
+[derby][Time:1464280458165][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458166][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setString (7, 5555551212) called
+[derby][Time:1464280458167][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458167][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] setInt (8, 200000) called
+[derby][Time:1464280458168][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458169][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] execute () called
+[derby][Time:1464280458170][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458172][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] execute () returned false
+[derby][Time:1464280458172][Thread:main][org.apache.derby.client.am.PreparedStatement42@71dac704] close () called
+[derby][Time:1464280458173][Thread:main][org.apache.derby.client.am.Statement@cac736f] executeQuery (SELECT * FROM NDAHLQUIST.ARENA) called
+[derby][Time:1464280458173][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458193][Thread:main][org.apache.derby.client.am.Statement@cac736f] executeQuery () returned ResultSet@3fb4f649
+[derby][Time:1464280458194][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458195][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458196][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458197][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458198][Thread:main][ResultSet@3fb4f649] getInt () returned 1
+[derby][Time:1464280458199][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458199][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458200][Thread:main][ResultSet@3fb4f649] getString () returned Montreal arena
+[derby][Time:1464280458201][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458202][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458203][Thread:main][ResultSet@3fb4f649] getString () returned 123 Rue Taquine
+[derby][Time:1464280458203][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458204][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458205][Thread:main][ResultSet@3fb4f649] getString () returned Montreal
+[derby][Time:1464280458206][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458207][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458209][Thread:main][ResultSet@3fb4f649] getString () returned QC
+[derby][Time:1464280458214][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458215][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458218][Thread:main][ResultSet@3fb4f649] getString () returned Q1Q1Q1 
+[derby][Time:1464280458220][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458221][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458222][Thread:main][ResultSet@3fb4f649] getString () returned Canada
+[derby][Time:1464280458223][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458224][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458225][Thread:main][ResultSet@3fb4f649] getString () returned 7775551212
+[derby][Time:1464280458227][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458228][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458231][Thread:main][ResultSet@3fb4f649] getInt () returned 100000
+[derby][Time:1464280458233][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458233][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458234][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458235][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458236][Thread:main][ResultSet@3fb4f649] getInt () returned 2
+[derby][Time:1464280458238][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458239][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458240][Thread:main][ResultSet@3fb4f649] getString () returned Boston arena
+[derby][Time:1464280458241][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458244][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458245][Thread:main][ResultSet@3fb4f649] getString () returned 123 Boston St.
+[derby][Time:1464280458246][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458247][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458248][Thread:main][ResultSet@3fb4f649] getString () returned Boston
+[derby][Time:1464280458251][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458252][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458254][Thread:main][ResultSet@3fb4f649] getString () returned MA
+[derby][Time:1464280458255][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458256][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458257][Thread:main][ResultSet@3fb4f649] getString () returned 12345  
+[derby][Time:1464280458259][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458261][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458262][Thread:main][ResultSet@3fb4f649] getString () returned USA
+[derby][Time:1464280458263][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458264][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458265][Thread:main][ResultSet@3fb4f649] getString () returned 8885551212
+[derby][Time:1464280458266][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458267][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458268][Thread:main][ResultSet@3fb4f649] getInt () returned 500000
+[derby][Time:1464280458269][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458270][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458271][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458272][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458273][Thread:main][ResultSet@3fb4f649] getInt () returned 3
+[derby][Time:1464280458273][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458274][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458275][Thread:main][ResultSet@3fb4f649] getString () returned Pitts arena
+[derby][Time:1464280458276][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458278][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458279][Thread:main][ResultSet@3fb4f649] getString () returned 123 Pitty Ave.
+[derby][Time:1464280458279][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458280][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458281][Thread:main][ResultSet@3fb4f649] getString () returned Pittsburgh
+[derby][Time:1464280458282][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458282][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458283][Thread:main][ResultSet@3fb4f649] getString () returned PA
+[derby][Time:1464280458284][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458285][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458285][Thread:main][ResultSet@3fb4f649] getString () returned 23456  
+[derby][Time:1464280458286][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458287][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458288][Thread:main][ResultSet@3fb4f649] getString () returned USA
+[derby][Time:1464280458288][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458289][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458290][Thread:main][ResultSet@3fb4f649] getString () returned 9995551212
+[derby][Time:1464280458291][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458291][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458292][Thread:main][ResultSet@3fb4f649] getInt () returned 400000
+[derby][Time:1464280458293][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458294][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458296][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458297][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458297][Thread:main][ResultSet@3fb4f649] getInt () returned 4
+[derby][Time:1464280458298][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458299][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458299][Thread:main][ResultSet@3fb4f649] getString () returned Vancouver arena
+[derby][Time:1464280458302][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458302][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458303][Thread:main][ResultSet@3fb4f649] getString () returned 123 Canuck Cres
+[derby][Time:1464280458304][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458305][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458305][Thread:main][ResultSet@3fb4f649] getString () returned Vancouver
+[derby][Time:1464280458306][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458307][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458307][Thread:main][ResultSet@3fb4f649] getString () returned BC
+[derby][Time:1464280458308][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458309][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458309][Thread:main][ResultSet@3fb4f649] getString () returned V1V1V1 
+[derby][Time:1464280458310][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458311][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458312][Thread:main][ResultSet@3fb4f649] getString () returned Canada
+[derby][Time:1464280458312][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458313][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458313][Thread:main][ResultSet@3fb4f649] getString () returned 1115551212
+[derby][Time:1464280458314][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458315][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458316][Thread:main][ResultSet@3fb4f649] getInt () returned 700000
+[derby][Time:1464280458317][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458317][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458318][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458319][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458320][Thread:main][ResultSet@3fb4f649] getInt () returned 5
+[derby][Time:1464280458321][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458321][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458322][Thread:main][ResultSet@3fb4f649] getString () returned Toronto arena
+[derby][Time:1464280458323][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458324][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458324][Thread:main][ResultSet@3fb4f649] getString () returned 123 Kenogami
+[derby][Time:1464280458325][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458326][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458326][Thread:main][ResultSet@3fb4f649] getString () returned Toronto
+[derby][Time:1464280458327][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458328][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458328][Thread:main][ResultSet@3fb4f649] getString () returned ON
+[derby][Time:1464280458329][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458330][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458331][Thread:main][ResultSet@3fb4f649] getString () returned T1T1T1 
+[derby][Time:1464280458331][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458332][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458333][Thread:main][ResultSet@3fb4f649] getString () returned Canada
+[derby][Time:1464280458334][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458334][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458335][Thread:main][ResultSet@3fb4f649] getString () returned 2225551212
+[derby][Time:1464280458336][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458337][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458337][Thread:main][ResultSet@3fb4f649] getInt () returned 900000
+[derby][Time:1464280458338][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458339][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458340][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458341][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458342][Thread:main][ResultSet@3fb4f649] getInt () returned 6
+[derby][Time:1464280458343][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458343][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458344][Thread:main][ResultSet@3fb4f649] getString () returned Detroit arena
+[derby][Time:1464280458345][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458346][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458346][Thread:main][ResultSet@3fb4f649] getString () returned 123 Tiger Blvd.
+[derby][Time:1464280458347][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458348][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458349][Thread:main][ResultSet@3fb4f649] getString () returned Detroit
+[derby][Time:1464280458349][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458350][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458351][Thread:main][ResultSet@3fb4f649] getString () returned MI
+[derby][Time:1464280458352][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458352][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458353][Thread:main][ResultSet@3fb4f649] getString () returned 34567  
+[derby][Time:1464280458354][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458354][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458355][Thread:main][ResultSet@3fb4f649] getString () returned USA
+[derby][Time:1464280458356][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458356][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458357][Thread:main][ResultSet@3fb4f649] getString () returned 3335551212
+[derby][Time:1464280458358][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458358][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458359][Thread:main][ResultSet@3fb4f649] getInt () returned 600000
+[derby][Time:1464280458360][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458361][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458361][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458362][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458363][Thread:main][ResultSet@3fb4f649] getInt () returned 7
+[derby][Time:1464280458364][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458364][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458365][Thread:main][ResultSet@3fb4f649] getString () returned Chicago arena
+[derby][Time:1464280458366][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458366][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458367][Thread:main][ResultSet@3fb4f649] getString () returned 123 Sock St.
+[derby][Time:1464280458368][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458369][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458369][Thread:main][ResultSet@3fb4f649] getString () returned Chicago
+[derby][Time:1464280458370][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458371][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458371][Thread:main][ResultSet@3fb4f649] getString () returned IL
+[derby][Time:1464280458372][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458373][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458373][Thread:main][ResultSet@3fb4f649] getString () returned 45678  
+[derby][Time:1464280458375][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458376][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458377][Thread:main][ResultSet@3fb4f649] getString () returned USA
+[derby][Time:1464280458378][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458378][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458379][Thread:main][ResultSet@3fb4f649] getString () returned 4445551212
+[derby][Time:1464280458380][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458382][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458383][Thread:main][ResultSet@3fb4f649] getInt () returned 300000
+[derby][Time:1464280458384][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458384][Thread:main][ResultSet@3fb4f649] next () returned true
+[derby][Time:1464280458385][Thread:main][ResultSet@3fb4f649] getInt (arenaID) called
+[derby][Time:1464280458386][Thread:main][ResultSet@3fb4f649] getInt (1) called
+[derby][Time:1464280458386][Thread:main][ResultSet@3fb4f649] getInt () returned 8
+[derby][Time:1464280458387][Thread:main][ResultSet@3fb4f649] getString (arenaname) called
+[derby][Time:1464280458388][Thread:main][ResultSet@3fb4f649] getString (2) called
+[derby][Time:1464280458389][Thread:main][ResultSet@3fb4f649] getString () returned Newark arena
+[derby][Time:1464280458389][Thread:main][ResultSet@3fb4f649] getString (streetAddress) called
+[derby][Time:1464280458390][Thread:main][ResultSet@3fb4f649] getString (3) called
+[derby][Time:1464280458391][Thread:main][ResultSet@3fb4f649] getString () returned 123 Newark Rd.
+[derby][Time:1464280458391][Thread:main][ResultSet@3fb4f649] getString (city) called
+[derby][Time:1464280458392][Thread:main][ResultSet@3fb4f649] getString (4) called
+[derby][Time:1464280458393][Thread:main][ResultSet@3fb4f649] getString () returned Newark
+[derby][Time:1464280458394][Thread:main][ResultSet@3fb4f649] getString (state_province) called
+[derby][Time:1464280458394][Thread:main][ResultSet@3fb4f649] getString (5) called
+[derby][Time:1464280458395][Thread:main][ResultSet@3fb4f649] getString () returned NJ
+[derby][Time:1464280458396][Thread:main][ResultSet@3fb4f649] getString (postalCode) called
+[derby][Time:1464280458396][Thread:main][ResultSet@3fb4f649] getString (6) called
+[derby][Time:1464280458397][Thread:main][ResultSet@3fb4f649] getString () returned 56789  
+[derby][Time:1464280458398][Thread:main][ResultSet@3fb4f649] getString (country) called
+[derby][Time:1464280458399][Thread:main][ResultSet@3fb4f649] getString (7) called
+[derby][Time:1464280458399][Thread:main][ResultSet@3fb4f649] getString () returned USA
+[derby][Time:1464280458400][Thread:main][ResultSet@3fb4f649] getString (phone) called
+[derby][Time:1464280458401][Thread:main][ResultSet@3fb4f649] getString (8) called
+[derby][Time:1464280458402][Thread:main][ResultSet@3fb4f649] getString () returned 5555551212
+[derby][Time:1464280458402][Thread:main][ResultSet@3fb4f649] getInt (capacity) called
+[derby][Time:1464280458403][Thread:main][ResultSet@3fb4f649] getInt (9) called
+[derby][Time:1464280458404][Thread:main][ResultSet@3fb4f649] getInt () returned 200000
+[derby][Time:1464280458405][Thread:main][ResultSet@3fb4f649] next () called
+[derby][Time:1464280458406][Thread:main][ResultSet@3fb4f649] next () returned false
+[derby][Time:1464280458407][Thread:main][org.apache.derby.client.am.Statement@cac736f] close () called
+[derby][Time:1464280458408][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458409][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458409][Thread:main][ResultSet@3fb4f649] close () called
+[derby][Time:1464280458410][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] rollback () called
+[derby][Time:1464280458537][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] isClosed () returned false
+[derby][Time:1464280458538][Thread:main][org.apache.derby.client.net.NetConnection40@379619aa] close () called
